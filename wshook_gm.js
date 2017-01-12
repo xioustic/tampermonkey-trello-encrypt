@@ -39,8 +39,8 @@
     wsHook.after = after;
   }
 
-  var _WS = WebSocket;
-  WebSocket = function(url, protocols) {
+  var _WS = window.WebSocket;
+  window.WebSocket = function(url, protocols) {
     var WSObject;
     this.url = url;
     this.protocols = protocols;
