@@ -1,0 +1,2 @@
+- add ability to change password (check for presence of "oldPassword" setting)
+- add method to only decrypt (perhaps by setting password to "" and oldPassword to current password?)
