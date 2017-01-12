@@ -3,8 +3,8 @@
  * Reference: http://www.w3.org/TR/2011/WD-websockets-20110419/#websocket
  */
 
-var wsHook = {};
-(function() {
+(function(window) {
+  var wsHook = {}
   // Mutable MessageEvent.
   // Subclasses MessageEvent and makes data, origin and other MessageEvent properites mutatble.
   function MutableMessageEvent(o) {
@@ -69,4 +69,6 @@ var wsHook = {};
 
     return WSObject;
   }
-})();
+
+  this.wshook = wsHook
+}.call(this, unsafeWindow ? unsafeWindow : window))
