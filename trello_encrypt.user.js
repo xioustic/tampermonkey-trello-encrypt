@@ -4,7 +4,8 @@
 // @description Greasemonkey script for encrypting data in Trello by hijacking XHR requests and responses.
 // @include     http://trello.com/*
 // @include     https://trello.com/*
-
+// @require     https://github.com/xioustic/tampermonkey-trello-encrypt/raw/master/rollups_aes.js
+// @require     https://github.com/xioustic/tampermonkey-trello-encrypt/raw/master/xhook.min.js
 // @downloadURL https://github.com/xioustic/tampermonkey-trello-encrypt/raw/dev/trello_encrypt.user.js
 // @license     MIT
 // @grant       none
@@ -37,10 +38,6 @@
 // ESLINT:
 /* global xhook, GM_getValue, GM_setValue, prompt */
 
-/* USER SETTINGS */
-
-/* DEPENDENCIES */
-
 /* SCRIPT */
 // Set password
 var password = GM_getValue('aes.password', null)
@@ -54,7 +51,7 @@ function requestPassword () {
   }
 }
 
-GM_registerMenuCommand('test',function () {console.log('hello cmd'), 'z'}
+GM_registerMenuCommand('test',function () {console.log('hello cmd'), 'z'})
 
 xhook.before(function (req) {
   console.log('before')
