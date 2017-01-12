@@ -70,5 +70,11 @@
     return WSObject;
   }
 
-  this.wshook = wsHook
+  if (typeof define === "function" && define.amd) {
+    define("wshook", [], function() {
+      return wsHook;
+    });
+  } else {
+    (this.exports || this).wshook = wsHook;
+  }
 }.call(this, unsafeWindow ? unsafeWindow : window))
