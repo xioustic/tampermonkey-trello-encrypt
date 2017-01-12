@@ -1,2 +1,3 @@
 - add ability to change password (check for presence of "oldPassword" setting)
 - add method to only decrypt (perhaps by setting password to "" and oldPassword to current password?)
+- pick sane encryption defaults; cryptojs has bad ones: http://stackoverflow.com/a/27250883/7341881
