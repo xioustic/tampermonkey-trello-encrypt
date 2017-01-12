@@ -5,7 +5,7 @@
 // @include     http://trello.com/*
 // @include     https://trello.com/*
 
-// @downloadURL https://github.com/xioustic/tampermonkey-trello-encrypt/raw/master/trello_encrypt.user.js
+// @downloadURL https://github.com/xioustic/tampermonkey-trello-encrypt/raw/dev/trello_encrypt.user.js
 // @license     MIT
 // @grant       none
 // @version     v0.0.1
