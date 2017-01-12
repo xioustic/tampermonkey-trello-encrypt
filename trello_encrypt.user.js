@@ -12,8 +12,6 @@
 // @version     0.01
 // @nocompat Chrome
 // ==/UserScript==
-// ESLINT:
-/* global xhook */
 
 /*
  * Copyright (c) 2016 Xioustic
@@ -37,12 +35,27 @@
  * SOFTWARE.
  */
 
+// ESLINT:
+/* global xhook, GM_getValue, GM_setValue, prompt */
+
 /* USER SETTINGS */
 
 /* DEPENDENCIES */
 
 /* SCRIPT */
-// IMPORTANT: Modify this password from the default!
+// Set password
+var password = GM_getValue('aes.password', null)
+if (password === null) requestPassword()
+
+function requestPassword () {
+  var password = prompt('Please type your Trello Encryption password:')
+  if (password === '') requestPassword()
+  else {
+    GM_setValue('aes.password', password)
+  }
+}
+
+GM_registerMenuCommand('test',function () {console.log('hello cmd'), 'z'}
 
 xhook.before(function (req) {
   console.log('before')
