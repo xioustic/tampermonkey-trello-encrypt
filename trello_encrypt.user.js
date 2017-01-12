@@ -8,7 +8,7 @@
 // @downloadURL https://github.com/xioustic/tampermonkey-trello-encrypt/raw/master/trello_encrypt.user.js
 // @license     MIT
 // @grant       none
-// @version     0.01
+// @version     v0.0.1
 // @nocompat Chrome
 // ==/UserScript==
 
